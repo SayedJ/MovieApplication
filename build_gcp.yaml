@@ -1,0 +1,14 @@
+steps:
+- name: 'gcr.io/cloud-builders/git'
+  args:
+  - clone
+  - '--depth'
+  - '1'
+  - https://github.com/SayedJ/MovieApplication.git
+  
+  
+- name: 'gcr.io/cloud-builders/docker'
+args: ['build', '-t', 'gcr.io/avian-light-371011/version1',
+
+# Publish the image to Container Registry.
+images: ['gcr.io/avian-light-371011/version1']
